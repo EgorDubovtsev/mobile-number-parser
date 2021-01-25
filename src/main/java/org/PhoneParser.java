@@ -10,6 +10,9 @@ public class PhoneParser {
     private static final String NOT_PARSED_PHONE_NUMBER = "\\+\\d\\(\\d{3}\\)\\s(\\d){3}\\s(\\d){2}\\s(\\d){2}";
     private static final String NOT_A_DIGIT = "\\D";
 
+    private PhoneParser() {
+    }
+
     public static List<String> getPhoneNumbersFromLine(String line) {
         List<String> phoneNumbers = new ArrayList<>();
         Pattern pattern = Pattern.compile(NOT_PARSED_PHONE_NUMBER);
